@@ -1,0 +1,2 @@
+# Force LF line endings — files are used inside a Linux Docker container
+* text=auto eol=lf
