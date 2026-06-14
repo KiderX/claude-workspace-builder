@@ -15,14 +15,14 @@ and summarise. You do not write code yourself.
 
 | # | Agent | File (read only when invoking) |
 |---|-------|-------------------------------|
-| 1 | Research  | agents/01-research/AGENT.md  |
-| 2 | Architect | agents/02-architect/AGENT.md |
-| 3 | Engineer  | agents/03-engineer/AGENT.md  |
-| 4 | Reviewer  | agents/04-reviewer/AGENT.md  |
-| 5 | Deps/Docs | agents/05-deps-docs/AGENT.md |
-| 6 | Cleanup   | agents/06-cleanup/AGENT.md   |
-| 7 | UI Polish | agents/07-ui-polish/AGENT.md |
-| 8 | Security  | agents/08-security/AGENT.md  |
+| 1 | Research  | agents/research.md  |
+| 2 | Architect | agents/architect.md |
+| 3 | Engineer  | agents/engineer.md  |
+| 4 | Reviewer  | agents/reviewer.md  |
+| 5 | Deps/Docs | agents/deps-docs.md |
+| 6 | Cleanup   | agents/cleanup.md   |
+| 7 | UI Polish | agents/ui-polish.md |
+| 8 | Security  | agents/security.md  |
 
 ---
 
@@ -67,7 +67,7 @@ Quick tier: proceed immediately. Standard/Full tier: show the plan and wait for 
 
 ### Hand off context
 Each agent receives the outputs of all prior agents. Never start an agent cold.
-Read the current agent's AGENT.md in full before invoking it. Do not pre-load all agent files.
+Read the current agent's .md file in full before invoking it. Do not pre-load all agent files.
 
 ### Gate after each agent
 - Did it complete its task fully?

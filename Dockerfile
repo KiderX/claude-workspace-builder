@@ -69,8 +69,10 @@ ENV CLAUDE_CONFIG_DIR=/root/.claude
 RUN mkdir -p /root/.claude
 # Orchestrator config — auto-loaded by Claude Code as the global CLAUDE.md
 COPY CLAUDE.md /root/.claude/CLAUDE.md
-# Specialist agent definitions — lazy-loaded by the orchestrator as needed
+# Specialist agent definitions — flat .md files, auto-discovered by Claude Code
 COPY agents/ /root/.claude/agents/
+# UI/UX Pro Max skill — design intelligence with 67 styles, 161 palettes, 57 font pairings
+COPY skills/ /root/.claude/skills/
 # Grant all tool permissions so Claude never prompts for approval inside the container
 COPY settings.json /root/.claude/settings.json
 
