@@ -71,10 +71,12 @@ RUN mkdir -p /root/.claude
 COPY CLAUDE.md /root/.claude/CLAUDE.md
 # Specialist agent definitions — flat .md files, auto-discovered by Claude Code
 COPY agents/ /root/.claude/agents/
-# UI/UX Pro Max skill — design intelligence with 67 styles, 161 palettes, 57 font pairings
-COPY skills/ /root/.claude/skills/
 # Grant all tool permissions so Claude never prompts for approval inside the container
 COPY settings.json /root/.claude/settings.json
+
+# UI/UX Pro Max skill — installed from source so it always pulls the latest published version.
+# Running from /root so uipro-cli places files in /root/.claude/skills/ (its CWD-relative target).
+RUN cd /root && npx uipro-cli init --ai claude
 
 # Git/SSH quality of life:
 # - pre-trust common git hosts so the first clone doesn't prompt
